@@ -36,7 +36,7 @@ function App() {
     setNumber(gen);
   }
 
-  let [Color, setcolor] = useState('See Magic');
+  let [Color, setcolor] = useState();
   let hex = () => {
     const newNum = Math.floor(Math.random() * 16777215).toString(16);
     let x = "#";
