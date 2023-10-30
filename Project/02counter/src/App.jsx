@@ -36,6 +36,17 @@ function App() {
         setNumber(gen);
       }
 
+  let [Color, setcolor] = useState('See Magic');
+    let hex = () => {
+      const newNum = Math.floor(Math.random()*16777215).toString(16);
+      let x ="#";
+      let add = x.concat(newNum);
+      setcolor(add);
+      
+    }
+
+    
+
   return (
     <>
       <h1>Coder Shubham</h1>
@@ -47,6 +58,15 @@ function App() {
       <h1>Generate Random Number</h1>
       <button onClick={RandomNum}>Generate</button>
       <h3>Random Number : {Number}</h3>
+
+      <br/>
+      <h1>Change color</h1>
+      <button onClick={hex}>Click</button>
+
+      <div>
+        <h1 style={{color:`${Color}`}}>See Magic</h1>
+      </div>
+
     </>
   )
 }
